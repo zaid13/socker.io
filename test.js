@@ -15,5 +15,10 @@ app.get('/', (req, res) => {
 })
 
 
-const server = http.Server(app)
-server.listen(PORT)
+// const server = http.Server(app)
+// server.listen(PORT)
+
+const server = app.listen(PORT, function () {
+  console.log(`Listening on port ${PORT}`);
+  console.log(`http://localhost:${PORT}`);
+});
