@@ -26,9 +26,9 @@
 
 const express = require('express')
 const app = express()
-
+const PORT = process.env.PORT || 8050;
 app.get('/', (req, res) => {
   res.send('Hi!')
 })
 
-app.listen(3000, () => console.log('Server ready'))
+app.listen(PORT, () => console.log('Server ready'))
